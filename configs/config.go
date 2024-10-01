@@ -24,15 +24,15 @@ type DBConfig struct {
 }
 
 func init() {
-	viper.setDefault("api.port", "8080")
-	viper.setDefault("database.host", "localhost")
-	viper.setDefault("database.port", "5432")
+	viper.SetDefault("api.port", "8080")
+	viper.SetDefault("database.host", "localhost")
+	viper.SetDefault("database.port", "5432")
 }
 
 func Load() error {
-	viper.setConfigName("config")
-	viper.serConfigType("toml")
-	viper.addConfigPath(".")
+	viper.SetConfigName("config")
+	viper.SetConfigType("toml")
+	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
 		if _, ok := err.(viper.ConfigFileNotFoundError); !ok {
