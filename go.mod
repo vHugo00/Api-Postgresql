@@ -3,6 +3,7 @@ module github.com/vHugo00/Api-Postgresql
 go 1.23.0
 
 require (
+	github.com/go-chi/chi/v5 v5.1.0
 	github.com/lib/pq v1.10.9
 	github.com/spf13/viper v1.19.0
 )
